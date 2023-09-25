@@ -1,0 +1,13 @@
+[package]
+name = "magent_autonomy"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "magent_autonomy"
+path = "rust_src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = "0.19.0"
