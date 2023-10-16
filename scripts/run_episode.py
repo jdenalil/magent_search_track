@@ -13,12 +13,9 @@ if __name__ == "__main__":
         # assemble actions for each agent
         actions = {}
         for agent in env.agents:
-            # TODO: add target assignment based on distance to targets
-            actions[agent] = towards_landmark(
-                observations[agent].tolist(), int(agent[-1])
-            )
+            actions[agent] = towards_landmark(observations[agent].tolist())
         observations, rewards, terminations, truncations, infos = env.step(actions)
         # print(rewards)
-        # time.sleep(1)
+        time.sleep(1)
 
     env.close()
